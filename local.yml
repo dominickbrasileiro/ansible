@@ -1,0 +1,3 @@
+- hosts: localhost
+  tasks:
+    - include_tasks: tasks/dotfiles.yml

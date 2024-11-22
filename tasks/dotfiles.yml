@@ -1,0 +1,14 @@
+- name: Installing stow
+  homebrew:
+    name: stow
+    state: present
+    update_homebrew: yes
+  tags:
+    - install
+    - dotfiles
+
+- name: Stowing dotfiles
+  shell: cd ./.dotfiles && ./install.sh
+  tags:
+    - install
+    - dotfiles
