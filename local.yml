@@ -1,3 +1,7 @@
 - hosts: localhost
+  vars:
+    source_key: ./.ssh/id_ed25519
+    dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_ed25519"
   tasks:
+    - include_tasks: tasks/ssh.yml
     - include_tasks: tasks/dotfiles.yml
