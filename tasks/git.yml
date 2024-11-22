@@ -1,0 +1,47 @@
+- name: Git setup user.email
+  git_config:
+    name: user.email
+    scope: global
+    value: dominick.brasileiro1@gmail.com
+  tags:
+    - git
+
+- name: Git setup user.name
+  git_config:
+    name: user.name
+    scope: global
+    value: Dominick Brasileiro
+  tags:
+    - git
+
+- name: Git setup pull.rebase
+  git_config:
+    name: pull.rebase
+    scope: global
+    value: "true"
+  tags:
+    - git
+
+- name: Git setup init.defaultBranch
+  git_config:
+    name: init.defaultBranch
+    scope: global
+    value: master
+  tags:
+    - git
+
+- name: Git setup push.autoSetupRemote
+  git_config:
+    name: push.autoSetupRemote
+    scope: global
+    value: "true"
+  tags:
+    - git
+
+- name: Git setup core.editor
+  git_config:
+    name: core.editor
+    scope: global
+    value: nvim
+  tags:
+    - git
