@@ -1,0 +1,24 @@
+#!/bin/zsh
+if [[ $EUID -ne 0 ]]; then
+echo "This script must be run with sudo." >&2
+exit 1
+fi
+
+if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+echo "Usage: sudo ./script.sh <interface> <MAC_addr>"
+echo "Sets the MAC address for the specified network interface."
+echo "Arguments:"
+echo " <interface> Network interface to set MAC address for."
+echo " <MAC_addr> New MAC address to set."
+exit 0
+fi
+
+if [[ -z "$1" || -z "$2" ]]; then
+echo 'Missing <interface> and/or <MAC_addr>'
+echo "Use -h or --help option for usage information."
+exit 1
+fi
+
+/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -z
+ifconfig "$1" lladdr "$2"
+ifconfig "$1" ether "$2"

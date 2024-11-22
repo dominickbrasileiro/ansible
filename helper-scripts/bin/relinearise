@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Strip metadata and re-linearise:
+exiftool -all= -overwrite_original "$1"
+mv "$1" /tmp/relinearise-temp.pdf
+qpdf --linearize /tmp/relinearise-temp.pdf "$1"
+
