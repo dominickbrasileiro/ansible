@@ -962,3 +962,5 @@ require('lazy').setup({
 
 vim.opt.foldmethod = 'indent'
 vim.opt.foldlevel = 99
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 2
