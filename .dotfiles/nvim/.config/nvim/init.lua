@@ -194,6 +194,9 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- vim.keymap.set('n', '<C-d>', '<C-d>zz')
 -- vim.keymap.set('n', '<C-u>', '<C-u>zz')
 
+-- tmux-sessionizer
+vim.keymap.set('n', '<leader>f', ':silent !tmux neww tmux-sessionizer<CR>', { desc = 'Open tmux-sessionizer' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -675,7 +678,7 @@ require('lazy').setup({
     cmd = { 'ConformInfo' },
     keys = {
       {
-        '<leader>f',
+        '<leader>F',
         function()
           require('conform').format { async = true, lsp_format = 'fallback' }
         end,
