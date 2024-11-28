@@ -967,3 +967,19 @@ vim.opt.foldmethod = 'indent'
 vim.opt.foldlevel = 99
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
+
+-- vim.api.nvim_create_user_command('ChtSh', function()
+--   -- Open a vertical split
+--   vim.cmd 'vsplit'
+--   -- Set the split to be a terminal
+--   vim.cmd 'terminal'
+--   -- Run the cht.sh command
+--   vim.fn.chansend(vim.b.terminal_job_id, 'cht.sh\n')
+--   -- Automatically close the terminal and window when the command finishes
+--   -- vim.cmd [[
+--   --     autocmd TermClose <buffer> ++nested :q
+--   --   ]]
+--   vim.cmd [[
+--       autocmd TermClose <buffer> ++nested lua vim.defer_fn(function() vim.cmd('q') end, 200)
+--     ]]
+-- end, { nargs = 0 })
