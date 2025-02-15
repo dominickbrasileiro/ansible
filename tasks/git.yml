@@ -45,3 +45,35 @@
     value: nvim
   tags:
     - git
+
+- name: Git setup alias.c
+  git_config:
+    name: alias.c
+    scope: global
+    value: commit
+  tags:
+    - git
+
+- name: Git setup alias.s
+  git_config:
+    name: alias.s
+    scope: global
+    value: status
+  tags:
+    - git
+
+- name: Git setup alias.b
+  git_config:
+    name: alias.b
+    scope: global
+    value: branch
+  tags:
+    - git
+
+- name: Git setup alias.co
+  git_config:
+    name: alias.co
+    scope: global
+    value: checkout
+  tags:
+    - git
