@@ -1,0 +1,32 @@
+alt - return : open -na Hyper
+
+alt - j : yabai -m window --focus stack.next || yabai -m window --focus south
+alt - k : yabai -m window --focus stack.prev || yabai -m window --focus north
+alt - h : yabai -m window --focus west
+alt - l : yabai -m window --focus east
+
+alt - 1 : yabai -m space --focus 1 ; sleep 0.25 ; yabai -m window --focus first
+alt - 2 : yabai -m space --focus 2 ; sleep 0.25 ; yabai -m window --focus first
+alt - 3 : yabai -m space --focus 3 ; sleep 0.25 ; yabai -m window --focus first
+alt - 4 : yabai -m space --focus 4 ; sleep 0.25 ; yabai -m window --focus first
+alt - 5 : yabai -m space --focus 5 ; sleep 0.25 ; yabai -m window --focus first
+alt - 6 : yabai -m space --focus 6 ; sleep 0.25 ; yabai -m window --focus first
+alt - 7 : yabai -m space --focus 7 ; sleep 0.25 ; yabai -m window --focus first
+alt - 8 : yabai -m space --focus 8 ; sleep 0.25 ; yabai -m window --focus first
+alt - 9 : yabai -m space --focus 9 ; sleep 0.25 ; yabai -m window --focus first
+
+alt + shift - 1 : yabai -m window --space 1 --focus
+alt + shift - 2 : yabai -m window --space 2 --focus
+alt + shift - 3 : yabai -m window --space 3 --focus
+alt + shift - 4 : yabai -m window --space 4 --focus
+alt + shift - 5 : yabai -m window --space 5 --focus
+alt + shift - 6 : yabai -m window --space 6 --focus
+alt + shift - 7 : yabai -m window --space 7 --focus
+alt + shift - 8 : yabai -m window --space 8 --focus
+alt + shift - 9 : yabai -m window --space 9 --focus
+
+alt - e : yabai -m space --layout bsp
+alt - s : yabai -m space --layout stack
+alt - f : yabai -m window --toggle zoom-fullscreen
+alt + shift - space : yabai -m window --toggle float
+alt + shift - q : $HOME/.config/skhd/helpers.sh kill_last_instance ; yabai -m window --focus first
