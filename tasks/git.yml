@@ -7,7 +7,7 @@
     - install
     - git
 
-- name: Git config user.email
+- name: Git config
   git_config:
     scope: global
     name: "{{ item.key }}"
