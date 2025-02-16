@@ -14,6 +14,30 @@
   tags:
     - git
 
+- name: Git setup user.signingkey
+  git_config:
+    name: user.signingkey
+    scope: global
+    value: "{{ pgp_key_id }}"
+  tags:
+    - git
+
+- name: Git setup commit.gpgsign
+  git_config:
+    name: commit.gpgsign
+    scope: global
+    value: true
+  tags:
+    - git
+
+- name: Git setup tag.gpgSign
+  git_config:
+    name: tag.gpgSign
+    scope: global
+    value: true
+  tags:
+    - git
+
 - name: Git setup pull.rebase
   git_config:
     name: pull.rebase
