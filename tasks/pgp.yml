@@ -1,9 +1,8 @@
-- name: Decrypt PGP key
-  ansible.builtin.command:
-    cmd: "ansible-vault decrypt --output=/tmp/secret.asc keys/pgp/secret.asc"
-  args:
-    creates: /tmp/secret.asc
-  changed_when: false
+- name: Decrypt PGP private key
+  copy:
+    src: keys/pgp/secret.asc
+    dest: /tmp/secret.asc
+    mode: 0600
 
 - name: Import PGP private key
   ansible.builtin.command:
