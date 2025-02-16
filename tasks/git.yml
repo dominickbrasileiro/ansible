@@ -3,9 +3,6 @@
     name: git
     state: present
     update_homebrew: yes
-  tags:
-    - install
-    - git
 
 - name: Git config
   git_config:
@@ -26,6 +23,3 @@
     - { key: 'alias.s', value: 'status' }
     - { key: 'alias.b', value: 'branch' }
     - { key: 'alias.co', value: 'checkout' }
-  tags:
-    - git
-
