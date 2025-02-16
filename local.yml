@@ -5,6 +5,7 @@
     pgp_secret: ./keys/pgp/secret.asc
     pgp_key_id: B5AA9174505D3C4B
   tasks:
+    - include_tasks: tasks/secrets.yml
     - include_tasks: tasks/ssh.yml
     - include_tasks: tasks/pgp.yml
     - include_tasks: tasks/git.yml
