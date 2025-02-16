@@ -1,3 +1,9 @@
+- name: Installing GnuPG
+  homebrew:
+    name: gnupg
+    state: present
+    update_homebrew: yes
+
 - name: Decrypt PGP private key
   copy:
     src: keys/pgp/secret.asc
