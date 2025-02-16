@@ -2,7 +2,9 @@
   vars:
     source_key: ./.ssh/id_ed25519
     dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_ed25519"
+    pgp_secret: ./.pgp/secret.asc
   tasks:
     - include_tasks: tasks/ssh.yml
+    - include_tasks: tasks/pgp.yml
     - include_tasks: tasks/git.yml
     - include_tasks: tasks/dotfiles.yml

@@ -1,0 +1,16 @@
+- name: Decrypt the GPG key
+  ansible.builtin.command:
+    cmd: "ansible-vault decrypt --output=/tmp/secret.asc {{ pgp_secret }}"
+  args:
+    creates: /tmp/secret.asc
+  changed_when: false
+
+- name: Import the GPG private key
+  ansible.builtin.command:
+    cmd: "gpg --import /tmp/secret.asc"
+  become_user: "dominickbrasileiro"
+
+- name: Remove the decrypted file
+  ansible.builtin.file:
+    path: /tmp/secret.asc
+    state: absent
