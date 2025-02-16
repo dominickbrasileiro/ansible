@@ -1,103 +1,31 @@
-- name: Git setup user.email
+- name: Installing git
+  homebrew:
+    name: git
+    state: present
+    update_homebrew: yes
+  tags:
+    - install
+    - git
+
+- name: Git config user.email
   git_config:
-    name: user.email
     scope: global
-    value: dominick.brasileiro1@gmail.com
+    name: "{{ item.key }}"
+    value: "{{ item.value }}"
+  loop:
+    - { key: 'user.email', value: 'dominick.brasileiro1@gmail.com' }
+    - { key: 'user.name', value: 'Dominick Brasileiro' }
+    - { key: 'user.signingkey', value: '{{ pgp_key_id }}' }
+    - { key: 'commit.gpgsign', value: 'true' }
+    - { key: 'tag.gpgSign', value: 'true' }
+    - { key: 'pull.rebase', value: 'true' }
+    - { key: 'init.defaultBranch', value: 'master' }
+    - { key: 'push.autoSetupRemote', value: 'true' }
+    - { key: 'core.editor', value: 'nvim' }
+    - { key: 'alias.c', value: 'commit' }
+    - { key: 'alias.s', value: 'status' }
+    - { key: 'alias.b', value: 'branch' }
+    - { key: 'alias.co', value: 'checkout' }
   tags:
     - git
 
-- name: Git setup user.name
-  git_config:
-    name: user.name
-    scope: global
-    value: Dominick Brasileiro
-  tags:
-    - git
-
-- name: Git setup user.signingkey
-  git_config:
-    name: user.signingkey
-    scope: global
-    value: "{{ pgp_key_id }}"
-  tags:
-    - git
-
-- name: Git setup commit.gpgsign
-  git_config:
-    name: commit.gpgsign
-    scope: global
-    value: true
-  tags:
-    - git
-
-- name: Git setup tag.gpgSign
-  git_config:
-    name: tag.gpgSign
-    scope: global
-    value: true
-  tags:
-    - git
-
-- name: Git setup pull.rebase
-  git_config:
-    name: pull.rebase
-    scope: global
-    value: "true"
-  tags:
-    - git
-
-- name: Git setup init.defaultBranch
-  git_config:
-    name: init.defaultBranch
-    scope: global
-    value: master
-  tags:
-    - git
-
-- name: Git setup push.autoSetupRemote
-  git_config:
-    name: push.autoSetupRemote
-    scope: global
-    value: "true"
-  tags:
-    - git
-
-- name: Git setup core.editor
-  git_config:
-    name: core.editor
-    scope: global
-    value: nvim
-  tags:
-    - git
-
-- name: Git setup alias.c
-  git_config:
-    name: alias.c
-    scope: global
-    value: commit
-  tags:
-    - git
-
-- name: Git setup alias.s
-  git_config:
-    name: alias.s
-    scope: global
-    value: status
-  tags:
-    - git
-
-- name: Git setup alias.b
-  git_config:
-    name: alias.b
-    scope: global
-    value: branch
-  tags:
-    - git
-
-- name: Git setup alias.co
-  git_config:
-    name: alias.co
-    scope: global
-    value: checkout
-  tags:
-    - git
