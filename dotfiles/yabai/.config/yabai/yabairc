@@ -31,8 +31,8 @@ for i in {1..9}; do
     yabai -m space $i --display 1
 done
 
-yabai -m rule --add app="^Hyper$" space=1
-yabai -m rule --add app="^Arc$" space=2
+yabai -m rule --add app="^Arc$" space=1
+yabai -m rule --add app="^Hyper$" space=2
 yabai -m rule --add app="^Slack$" space=3
 yabai -m rule --add app="ˆDiscord$" space=3
 yabai -m rule --add app="^Mail$" space=4
