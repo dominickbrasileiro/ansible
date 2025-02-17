@@ -1,9 +1,14 @@
 alt - return : open -na Hyper
 
-alt - j : yabai -m window --focus stack.next || yabai -m window --focus south
-alt - k : yabai -m window --focus stack.prev || yabai -m window --focus north
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
 alt - h : yabai -m window --focus west
 alt - l : yabai -m window --focus east
+
+alt + shift - j : yabai -m window --swap south
+alt + shift - k : yabai -m window --swap north
+alt + shift - h : yabai -m window --swap west
+alt + shift - l : yabai -m window --swap east
 
 alt - 1 : yabai -m space --focus 1 ; sleep 0.25 ; yabai -m window --focus first
 alt - 2 : yabai -m space --focus 2 ; sleep 0.25 ; yabai -m window --focus first
@@ -30,3 +35,6 @@ alt - s : yabai -m space --layout stack
 alt - f : yabai -m window --toggle zoom-fullscreen
 alt + shift - space : yabai -m window --toggle float
 alt + shift - q : $HOME/.config/skhd/helpers.sh kill_last_instance ; yabai -m window --focus first
+
+alt - x : yabai -m space --mirror x-axis
+alt - y : yabai -m space --mirror y-axis
