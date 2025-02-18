@@ -1,9 +1,3 @@
-- name: Installing git
-  homebrew:
-    name: git
-    state: present
-    update_homebrew: yes
-
 - name: Git config
   git_config:
     scope: global

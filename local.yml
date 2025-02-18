@@ -1,5 +1,6 @@
 - hosts: localhost
   tasks:
+    - include_tasks: tasks/dependencies.yml
     - include_tasks: tasks/secrets.yml
     - include_tasks: tasks/ssh.yml
     - include_tasks: tasks/pgp.yml

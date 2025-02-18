@@ -1,0 +1,35 @@
+- name: Install Homebrew formulas
+  homebrew:
+    state: present
+    update_homebrew: yes
+    name:
+      - ansible
+      - awscli
+      - coreutils
+      - exiftool
+      - ffmpeg
+      - fzf
+      - git
+      - gnupg
+      - go
+      - inetutils
+      - jq
+      - lazygit
+      - n
+      - neofetch
+      - neovim
+      - nmap
+      - parallel
+      - pinentry-mac
+      - qpdf
+      - ripgrep
+      - sl
+      - stow
+      - tealdeer
+      - terraform
+      - tmux
+      - yt-dlp
+      - zsh-autosuggestions
+      - zsh-syntax-highlighting
+      - koekeishiya/formulae/yabai
+      - koekeishiya/formulae/skhd
