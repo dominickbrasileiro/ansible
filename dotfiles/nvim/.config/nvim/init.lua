@@ -673,6 +673,7 @@ require('lazy').setup({
         'tflint',
         'ts_ls',
         'yamlls',
+        'basedpyright',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
