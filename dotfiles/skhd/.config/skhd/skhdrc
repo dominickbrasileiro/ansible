@@ -30,6 +30,7 @@ alt + shift - 7 : yabai -m window --space 7 --focus
 alt + shift - 8 : yabai -m window --space 8 --focus
 alt + shift - 9 : yabai -m window --space 9 --focus
 
+alt - r : yabai --restart-service
 alt - e : yabai -m space --layout bsp
 alt - s : yabai -m space --layout stack
 alt - f : yabai -m window --toggle zoom-fullscreen
