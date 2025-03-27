@@ -34,3 +34,6 @@
       - koekeishiya/formulae/yabai
       - koekeishiya/formulae/skhd
       - httpie
+
+- name: Upgrading all brew packages
+  shell: brew upgrade
