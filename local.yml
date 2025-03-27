@@ -6,3 +6,4 @@
     - include_tasks: tasks/pgp.yml
     - include_tasks: tasks/git.yml
     - include_tasks: tasks/dotfiles.yml
+    - include_tasks: tasks/yabai.yml
