@@ -1,6 +1,6 @@
 - name: Configuring sudoers.d/yabai
   become: true
-  shell: 'echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut -d " " -f 1) $(which yabai) --load-sa" | tee /private/etc/sudoers.d/yabai'
+  shell: 'echo "dominickbrasileiro ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut -d " " -f 1) $(which yabai) --load-sa" | tee /private/etc/sudoers.d/yabai'
 
 - name: Stoping yabai service
   ignore_errors: true
