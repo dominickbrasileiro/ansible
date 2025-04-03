@@ -34,6 +34,7 @@
       - koekeishiya/formulae/yabai
       - koekeishiya/formulae/skhd
       - httpie
+      - pyenv
 
 - name: Upgrading all brew packages
   shell: brew upgrade
