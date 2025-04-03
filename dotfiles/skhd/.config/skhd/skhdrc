@@ -1,4 +1,4 @@
-alt - return : open -na Hyper
+cmd - return : open -na Hyper
 
 alt - j : yabai -m window --focus south
 alt - k : yabai -m window --focus north
