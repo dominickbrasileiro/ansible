@@ -1,8 +1,10 @@
 # ZSH/OMZ Config
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
-plugins=(git kubectl)
+# plugins=(git kubectl zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete)
+plugins=(git kubectl zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
+
 
 # ------------------------------------------------------------
 
