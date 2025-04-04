@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-session=$(find ~ ~/personal ~/work -type d -maxdepth 1 -mindepth 1 | fzf)
+session=$(find ~ ~/personal ~/work/axios -type d -maxdepth 1 -mindepth 1 | fzf)
 
 session_name=$(basename $session | tr . _)
 
