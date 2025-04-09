@@ -2,7 +2,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 # plugins=(git kubectl zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete)
-plugins=(git kubectl zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git kubectl zsh-autosuggestions zsh-syntax-highlighting zsh-vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 
@@ -17,6 +17,8 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init - zsh)"
 
 alias vim=nvim
+alias t=tmux
+alias k=kubectl
 
 bindkey -s '^f' 'tmux-sessionizer\n'
 
