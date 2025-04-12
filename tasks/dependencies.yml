@@ -35,6 +35,7 @@
       - koekeishiya/formulae/skhd
       - httpie
       - pyenv
+      - minikube
 
 - name: Upgrading all brew packages
   shell: brew upgrade
