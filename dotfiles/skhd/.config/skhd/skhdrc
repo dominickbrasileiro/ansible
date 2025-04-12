@@ -31,6 +31,8 @@ alt + shift - 8 : yabai -m window --space 8
 alt + shift - 9 : yabai -m window --space 9
 
 alt - r : yabai --restart-service
+alt - o : yabai --stop-service
+alt - p : yabai --start-service
 alt - e : yabai -m space --layout bsp
 alt - s : yabai -m space --layout stack
 alt - f : yabai -m window --toggle zoom-fullscreen
