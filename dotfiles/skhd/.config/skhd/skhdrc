@@ -1,4 +1,4 @@
-cmd - return : open -na iTerm
+alt - t : open -na iTerm
 
 alt - j : yabai -m window --focus south
 alt - k : yabai -m window --focus north
