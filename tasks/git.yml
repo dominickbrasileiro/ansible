@@ -6,7 +6,7 @@
   loop:
     - { key: 'user.email', value: 'dominick.brasileiro1@gmail.com' }
     - { key: 'user.name', value: 'Dominick Brasileiro' }
-    - { key: 'user.signingkey', value: 'B5AA9174505D3C4B' }
+    - { key: 'user.signingkey', value: 'FC505EEB49A62DDE' }
     - { key: 'commit.gpgsign', value: 'true' }
     - { key: 'tag.gpgSign', value: 'true' }
     - { key: 'pull.rebase', value: 'true' }

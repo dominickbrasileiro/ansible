@@ -2,3 +2,4 @@ dotfiles/helper-scripts/.local/share/
 dotfiles/helper-scripts/.local/state/
 dotfiles/helper-scripts/.local/bin
 dotfiles/helper-scripts/.local/pipx/
+.idea
