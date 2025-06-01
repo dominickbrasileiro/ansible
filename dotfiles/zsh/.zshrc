@@ -5,6 +5,11 @@ ZSH_THEME="robbyrussell"
 plugins=(git kubectl zsh-autosuggestions zsh-syntax-highlighting zsh-vi-mode)
 source $ZSH/oh-my-zsh.sh
 
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/dominickbrasileiro/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
 
 # ------------------------------------------------------------
 
