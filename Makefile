@@ -1,4 +1,4 @@
 default: run-playbook
 
 run-playbook:
-	ansible-playbook local.yml --ask-vault-pass --ask-become-pass
+	doppler run -- ansible-playbook local.yml --vault-password-file ./.vault_pass.sh
